@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A professional portfolio website showcasing the projects, skills, and experience of [Your Name], a Python Developer specializing in web development with Django, HTML, CSS, and JavaScript.">
+    <meta name="keywords" content="Python Developer, Django, Web Development, Portfolio, JavaScript, HTML, CSS, Full Stack Developer">
+    <meta name="author" content="[Your Name]">
+
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Python Developer Portfolio - [Your Name]">
+    <meta property="og:description" content="Check out the portfolio of [Your Name], a skilled Python Developer with expertise in Django and modern web technologies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="https://yourwebsite.com/images/preview.jpg">
+
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Python Developer Portfolio - [Your Name]">
+    <meta name="twitter:description" content="Discover the projects and skills of [Your Name], a professional Python Developer.">
+    <meta name="twitter:image" content="https://yourwebsite.com/images/preview.jpg">
+    <meta name="twitter:site" content="@yourtwitterhandle">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://yourwebsite.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://yourwebsite.com/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="https://yourwebsite.com/apple-touch-icon.png">
+
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourwebsite.com">
+    
+    <!-- Tailwind CSS L -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/bootstrip_css/bootstrap.css">
+
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+   
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/resposivescreen.css">
+    
+    <!-- Title   -->
+    <title> Transparency</title>
+
+</head>
+
+<body class="bg-gray-50">
+    
+    <header class="bg-gradient-to-r from-purple-600 to-blue-600 sticky-top"  >
+        <div class="container mx-auto px-2">
+            <nav class="flex  items-center justify-between py-4 " >
+
+                <div
+                class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-semibold">
+                <a href="#" class="text-3xl font-bold">TP</a>
+               </div>
+
+
+                
+                <button id= "nav-toggle" class= "text-white md:hidden">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul id="nav-links" class= "hidden md:flex gap-6 ml-auto ">
+                    <li class="nav-item"><a href="#hero_section" class="text-white hover:text-purple-200 transition-colors text-1xl">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="text-white hover:text-purple-200 transition-colors text-1xl">About  </a></li>
+                    <li class="nav-item"><a href="#articles_name" class="text-white hover:text-purple-200 transition-colors text-1xl">Products</a></li>
+                    <li class="nav-item"><a href="#contact" class="text-white hover:text-purple-200 transition-colors text-1xl"> Contact </a></li>
+                    <li class="nav-item"><form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="w-30 p-2 text-white rounded-lg bg-blue-600 hover:bg-purple-700 transition-colors" type="submit">Search</button>
+                      </form></li>
+                    <li class="nav-item"><button class="w-30 p-2  text-white rounded-lg bg-blue-600 hover:bg-purple-700 transition-colors">
+                        Sign In
+                    </button></li>
+                    <button onclick="openModalCart()" class="w-30 p-2 d-flex justify-between  rounded-lg text-white bg-blue-600 hover:bg-purple-700 transition-colors">
+                        <i class="fa-solid fa-cart-shopping "></i> <p id="cartTotal" class="text-.5xl  " ></p>
+                    </button>
+                </ul>
+                
+                  
+            </div>
+            
+            </nav>
+        </div>
+    </header>  
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-purple-600 to-blue-600 hero-pattern relative overflow-hidden py-10 " id="hero_section">
+        
+        <!-- Floating Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div
+                class="absolute -left-8 -bottom-8 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob">
+            </div>
+            <div
+                class="absolute -right-8 -bottom-8 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/5"></div>
+        </div>
+         
+        
+        <!-- Content -->
+        <div class="container mx-auto px-4 py-20 relative">
+
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-7xl font-bold mb-6 text-white leading-tight">
+                    Welcome to <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-blue-200">Transparency
+                        </span>
+                </h1>
+                <h1 class="text-5xl text-purple-50 mb-8 leading-relaxed">
+                    TRANSPARENCY  IS  OUR  HONESTY
+                </h1>
+             
+             <div class="flex gap-4 justify-center">
+                    <button onclick="loadProducts()"
+                        class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-purple-50 transition-colors">
+                        <a href= "#articles_name" >Start Shopping</a>
+                    </button>
+                    <button
+                        class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors">
+                        <a href= "#contact" >Keeping Touch</a> 
+                    </button>
+                </div>
+             
+            </div>
+        </div>
+    </section>
+
+
+<!-- ........................About  section ............. START.......................... -->
+    <section id="about" class="my-10">
+        <div class="container my-10">
+            <!--........ About First Row....... Start-->
+            <div class="row  text-align-center" >
+                <div class="col-md-12 col-lg-5  " >
+                    <div class="about_us text-3xl" style="width: 120px; background-color: rgb(192, 199, 192);" > <p> About Us</p></div>
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden group py-10 px-5 my-5">
+                        <h2 class="text-bold text-2xl" style="color: rgb(24, 24, 28);">
+                            The Rise of E-Commerce Platforms for Food, Natural Medicine, and Organic Products:
+
+                        </h2><br>
+                        <P >  
+                            The e-commerce landscape for food, natural medicine, and organic products is poised for significant growth. Innovations such as personalized nutrition plans, virtual consultations with wellness experts, and blockchain for supply chain transparency will likely shape the future.
+
+                            In a world where health and sustainability are at the forefront of consumer priorities, these platforms are not just selling products—they’re promoting a lifestyle. For customers seeking to embrace wellness, these e-commerce sites are invaluable allies in their journey toward healthier living.
+                            
+                            By focusing on quality, convenience, and transparency, e-commerce businesses can continue to thrive while making a positive impact on both individual well-being and the planet.
+                            </P>
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-success mb-auto my-5 ">Read More  <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                            
+                    </div>    
+                    
+                </div>
+                 <div class="col-md-12  col-lg-7">
+                    <div class=" row">
+
+
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 ">
+                            <div class=" row" style="margin-top: 50px;">
+
+
+
+                                <div class ="col-sm-12 col-md-12 col-lg-12 ">                                  
+                                    <div class="about_2ndpart_first">
+                                    <div class="d-flex justify-between">
+                                        <h2 class="text-3xl text-center" style="color: rgb(80, 80, 178);" >Fruits </h2> 
+                                        <div class="about_icons ">
+                                            <p><i class="fa-solid fa-chart-line"></i> </p>                                         
+                                        </div>                                        
+                                    </div>
+                                        <br>
+                                        <div >
+                                          <p style="font-size: large;" >
+                                            Fruits and food play a vital role in our daily lives by providing essential nutrients, energy, and health benefits. They are foundational to human health, contributing to physical and mental well-being
+                                          </p>
+                                        </div> 
+                                        
+                                      </div>
+                                </div>
+                            
+                            
+                                <div class ="col-sm-12 col-md-12 col-lg-12 " >
+                                    <div class="about_2ndpart_first">
+                                        <div class="d-flex justify-between">
+                                            <h2 style="color: rgb(80, 80, 178);" class="text-3xl">
+                                                Organic Food
+                                               </h2>
+                                        <div class="about_icons">
+                                            <p >
+                                                <i class="fa-solid fa-chart-line"></i> 
+                                            </p>
+                                        </div>
+                                        
+                                        </div> <br>
+                                           <div>
+                                          <p style="font-size: larger;">
+                                            This includes fruits, vegetables, grains, dairy, and snacks free from synthetic pesticides and additives.
+                                        </div> 
+                                        
+                                      </div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 ">
+                            <div class=" row">
+                                <div class ="col-sm-12 col-md-12 col-lg-12 ">
+                                    <div class="about_2ndpart_first">
+                                     <div class="d-flex justify-between">
+                                        <h2 style="color: rgb(80, 80, 178);" class="text-3xl">
+                                            Natural Medicine 
+                                          </h2>
+                                        <div class="about_icons">
+                                            <p>
+                                                <i class="fa-solid fa-chart-line"></i> 
+                                            </p>
+                                        </div>
+                                    </div><br>
+                                        <div>
+                                          <p style="font-size: larger;">
+                                            Products like herbal teas, supplements, and essential oils that promote holistic health. 
+                                        </div> 
+                                        
+                                      </div>  
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class ="col-sm-12 col-md-12 col-lg-12 ">                                    
+                                    <div class="about_2ndpart_first">
+                                        <div class="d-flex justify-between">
+                                        <h2 style="color: rgb(80, 80, 178);" class="text-3xl">
+                                            Foods 
+                                          </h2>
+                                        <div class="about_icons">
+                                            <p>
+                                                <i class="fa-solid fa-chart-line"></i> 
+                                            </p>
+                                        </div>
+                                    </div> <br>
+                                        <div>
+                                          <p style="font-size: larger;">
+                                            Food encompasses a wide range of edible substances that provide energy and nutrients for growth, maintenance, and repair of the body. A balanced diet includes carbohydrates, proteins, fats, vitamins, minerals, and water.
+                                            . 
+                                          </p>
+                                        </div> 
+                                        
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                 </div>  
+            </div><br><br>
+        </div>
+            <!--........ About Second  Row....... Start-->
+        <div class="container-fluid py-10" style="background-color: rgb(175, 191, 201);">
+           <div class="container">
+            <div class= " d-flex justify-content-center "> <h2 class=" text-3xl "> Ours Partners </h2></div>
+            <div class="row  "  >
+                 <div class="col-sm-6 col-md-4 col-lg-3  ">
+                        <div class="about_second_row">
+                            <P> Lorem Ipsum1  </P>
+                        </div>
+                 </div>
+    
+                 <div class="col-sm-6 col-md-4 col-lg-3  ">
+                    <div class="about_second_row">
+                        <P> Lorem Ipsum1  </P>
+                    </div>
+                 </div>
+    
+                 <div class="col-sm-6 col-md-4 col-lg-3  ">
+                    <div class="about_second_row">
+                        <P> Lorem Ipsum1  </P>
+                    </div>
+                 </div>
+    
+                 <div class="col-sm-6 col-md-4 col-lg-3  ">
+                     <div class="about_second_row">
+                         <P> Lorem Ipsum1  </P>
+                     </div>
+                 </div>
+                 <div class="col-sm-6 col-md-4 col-lg-3  ">
+                    <div class="about_second_row">
+                        <P> Lorem Ipsum1  </P>
+                    </div>
+                 </div>
+    
+                 <div class="col-sm-6 col-md-4 col-lg-3  ">
+                    <div class="about_second_row">
+                      <P> Lorem Ipsum1  </P>
+                    </div>
+                 </div>
+    
+                 <div class="col-sm-6 col-md-4 col-lg-3  ">
+                     <div class="about_second_row">
+                         <P> Lorem Ipsum1  </P>
+                     </div>
+                 </div>
+    
+                 <div class="col-sm-6 col-md-4 col-lg-3  ">
+                     <div class="about_second_row">
+                         <P> Lorem Ipsum1  </P>
+                      </div>
+                 </div>
+    
+                 <div class="col-sm-6 col-md-4 col-lg-3  ">
+                    <div class="about_second_row">
+                        <P> Lorem Ipsum1  </P>
+                    </div>
+                 </div>
+    
+                 <div class="col-sm-6 col-md-4 col-lg-3  ">
+                     <div class="about_second_row">
+                         <P> Lorem Ipsum1  </P>
+                     </div>
+                 </div>
+    
+                 <div class="col-sm-6 col-md-4 col-lg-3  ">
+                     <div class="about_second_row">
+                         <P> Lorem Ipsum1  </P>
+                      </div>
+                 </div>
+    
+                 <div class="col-sm-6 col-md-4 col-lg-3  ">
+                     <div class="about_second_row">
+                        <P> Lorem Ipsum1  </P>
+                      </div>
+                 </div>
+                 
+            </div>
+        </div>
+    </div>
+    <!-- ........................About  Clients ............. START.......................... -->
+    </section>
+    <!-- .....................About  section ................. End ........................... -->
+
+    <!-- Main Content Wrapper -->
+    <div class="bg-gray-50 relative ">
+        <div class="container mx-auto px-4 py-3">
+            <!-- Categories Section -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                <div class="w-full">
+                    <h3 class="text-gray-800 text-xl font-semibold mb-4">Explore Categories</h3>
+                    <div class="flex flex-wrap gap-2" id="buttons_container">
+                       <!--
+                        <button
+                            class="px-4 py-2 rounded-xl bg-purple-600 text-white shadow-lg shadow-purple-200 transition-all text-sm sm:text-base whitespace-nowrap" onclick="newestAritle()">
+                            All 
+                        </button>
+                    -->
+                        <!-- Add more category buttons as needed -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Posts Section -->
+            <section class="py-6">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8" id="articles_name">All Products</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="posts_container">
+                    <!-- Sample Post Card - Use this as template -->
+                    <article
+                        class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden group">
+                        <div class="relative overflow-hidden">
+                            <img src="https://picsum.photos/seed/template/400/250" alt="Post Title"
+                                class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute top-4 left-4">
+                                <!-- 
+                                <span
+                                    class="px-4 py-2 bg-white/90 backdrop-blur-sm rounded-lg text-purple-600 text-sm font-semibold">
+                                    Technology
+                                </span>
+                                -->
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors">
+                                Example Post Title
+                            </h3>
+                            <p class="text-gray-600 mb-4 line-clamp-2">
+                                This is a sample post description. Replace this with your actual content.
+                            </p>
+                            <div class="flex items-center justify-between"> Add to Cart
+                                <button onclick="openModal('post-1')"
+                                    class="text-purple-600 hover:text-purple-700 font-medium inline-flex items-center gap-2 transition-colors">
+                                    Details →
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Add more post cards as needed -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="postModal"
+        class="fixed inset-20 bg-black bg-opacity-50 hidden items-start justify-center z-50 overflow-y-auto  px-4 py-8">
+        <span id="comment_id"></span>
+        <div class="bg-white rounded-lg max-w-4xl w-full my-4 relative">
+            <!-- Header -->
+            <div class="border-b">
+                <div class="p-6 flex justify-between items-center">
+                    <h2 class="text-2xl font-bold mx-auto text-center" id="post_name"> Product Name</h2><br>
+                    <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="p-6">
+                <img id="postImage" class="w-120 h-80 object-cover mx-auto rounded-lg mb-6" src="https://picsum.photos/seed/tailwind/800/400"
+                    alt="Getting Started with TailwindCSS">
+                <div class="prose max-w-none ">
+                    
+                    <h6 class="text-2xl font-bold" > Product Detail:</h6>
+                    <p class="text-gray-700 mb-8" id="post_description"> </p><br>
+                    <h2 class="text-4xl font-bold text-center " id="post_price"> Price: $00.00 </h2><br>
+                    
+                    <div class="d-flex justify-center">
+                        <h2 class="text-4xl font-bold text-warning " id="post_rate"> 0/5 </h2>
+                        <h2 class="text-4xl font-bold text-purple-900 mx-3" id="post_rating"> of 0 Ratings</h2>
+                    </div>
+                        
+                    
+                </div>
+           
+          
+           
+           
+           
+           
+           
+                <!--   
+                
+            
+Comments Section 
+                <div class="border-t pt-6">
+                    <h3 class="text-xl font-bold mb-6 text-purple-600">Join the Discussion</h3>
+Existing Comments 
+                    <div class="space-y-4 mb-8" id="post_comments">
+Sample Comment 1 
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-semibold">
+                                    J
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800">Jane Smith</div>
+                                    <div class="text-sm text-gray-500">December 15, 2024</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">Great introduction to TailwindCSS! The examples
+                                were very helpful.</p>
+                        </div>
+
+         Sample Comment 2 
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-semibold">
+                                    M
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800">Mike Johnson</div>
+                                    <div class="text-sm text-gray-500">December 16, 2024</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">This helped me understand the basics. Looking
+                                forward to more tutorials!</p>
+                        </div>
+                    </div>
+
+                    
+                    <div id="commentForm" class="bg-gray-50 p-6 rounded-xl shadow-sm border border-purple-100">
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">Leave a Comment</h4>
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                <input type="text" id="authorName" placeholder="John Doe"
+                                    class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-purple-400 focus:ring focus:ring-purple-100 transition-colors bg-white"
+                                    required >
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Your Comment</label>
+                                <textarea id="commentText" rows="4" placeholder="Share your thoughts..."
+                                    class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-purple-400 focus:ring focus:ring-purple-100 transition-colors bg-white resize-none"
+                                    required></textarea>
+                            </div>
+
+
+                         -->                 
+                         <div class="flex flex-wrap gap-2 justify-content-between" id="modal_buttons">
+                            <!--
+                             <button
+                                 class="px-4 py-2 rounded-xl bg-purple-600 text-white shadow-lg shadow-purple-200 transition-all text-sm sm:text-base whitespace-nowrap" onclick="newestAritle()">
+                                 All 
+                             </button>
+                         -->
+                             <!-- Add more category buttons as needed -->
+                         </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- Cart Modal -->
+
+
+
+
+        <div   id="cart_modal"
+           class="fixed inset-12 bg-black bg-opacity-50 hidden items-start justify-center z-50 overflow-y-auto  px-4 py-8">
+          <span id="comment_id"></span>
+           <div class="bg-white rounded-lg max-w-4xl w-full my-4 relative">
+            <!-- Header -->
+            <div class="border-b">
+                <div class="p-6 flex justify-between items-center">
+                    <h2 class="text-2xl font-bold mx-auto text-center"> Your Cart</h2><br>
+                    <button onclick="closeModalCart()" class="text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="p-6">
+               
+                <div class="prose max-w-none ">
+                    
+                <table class="table ">
+                   <thead class="table table-head">
+                     <tr class= "table table-row">
+                          <td> SL </td>
+                          <td> Image </td>
+                          <td> Name </td>
+                          <td> Quantity </td>
+                          <td> Unit Price </td>
+                         <td> Price </td>
+                          <td> Action </td>
+                      </tr>
+                   </thead>
+                   <tbody class= "table table-body" id="cart_details">
+
+
+                   </tbody>
+
+                </table><br>
+                  
+                  
+                <div class="d-flex  pl-50"> 
+                    <h2 style= "width:500px">Subtotal Price </h2>
+                    <h2> $<span id="cartSubtotalPrice" class="mx-auto"> 0 </span></h2>
+                  </div><br>
+                  
+                 <div class="d-flex  pl-50"> 
+                    <h2 style= "width:500px">Delivery Charge-10% </h2>
+                    <h2> $<span id="cartDeliveryPrice" class="mx-auto"> 0 </span></h2>
+                  </div><br>
+
+                 <div class="d-flex  pl-50"> 
+                    <h2 style= "width:500px"> Tax-15% </h2>
+                    <h2> $<span id="cartTaxPrice" class="mx-auto"> 0 </span></h2>
+                  </div><br>
+                  
+                  <div class="d-flex  pl-50"> 
+                    <h2 style= "width:500px"> Total Price </h2>
+                    <h2> $<span id="cartTotalPrice" class="mx-auto"> 0 </span></h2>
+                  </div><br>
+
+                    <div class="d-flex justify-between">
+                    <button onclick= "closeModalCart()" class="px-4 py-2 rounded-xl bg-gray-200 text-gray-600 hover:bg-purple-600 hover:text-white hover:shadow-lg hover:shadow-purple-200 transition-all text-sm sm:text-base whitespace-nowrap">
+                        Cancel
+                      </button>
+                      <button onclick="addToCart(${el.id}, ${el.price},'${el.title}')" class="px-4 py-2 rounded-xl bg-gray-200 text-gray-600 hover:bg-purple-600 hover:text-white hover:shadow-lg hover:shadow-purple-200 transition-all text-sm sm:text-base whitespace-nowrap">  
+                        Checkout
+                       </button>    
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <section id="contact" class=  "inset-0 bg-black bg-opacity-50  items-start justify-center z-50  py-8">
+
+        <div class="container" >
+        
+            <div class="row ">
+                 <div class="text-3xl">
+                    <h3 style="font-weight: bolder;"> CHECK OUR CONTACT </h3>
+                </div>
+             </div>
+            <div class="row my-4"  >
+              <div class="col-sm-5 col-md-5 col-lg-5 ">
+                
+                <div class="row  d-flex align-items-center address my-3">
+                    <div class="col-2 icons_hover ">
+                       <h2>
+                        <i class="fa-solid fa-location-dot"></i>
+                       </h2> 
+                    </div>
+                    <div class="col-10">
+                      <h2 class="text-3xl">Address</h2>
+                      <p> Mugda BPDB OFFCIER's Quater, MUGDA, DHAKA</p>
+                    </div>
+                </div>
+                
+                <div class="row  d-flex align-items-center address my-3">
+                    <div class="col-2 icons_hover ">
+                    <h2>
+                        <i class="fa-solid fa-phone"></i>
+                    </h2>
+                    
+                  </div>
+                  <div class="col-10">
+                      <h2 class="text-3xl">Call Us</h2>
+                      <p> +8801711291665</p>
+                  </div>
+                </div>
+                
+                <div class="row  d-flex align-items-center address my-3">
+                  <div class="col-2 icons_hover ">
+                    <h2>
+                        <i class="fa-solid fa-envelope"></i>
+                    </h2>
+                   
+                  </div>
+                  <div class="col-10">
+                      <h2  class="text-3xl">Email Us </h2>
+                      <p> 3kids121212@gmail.com</p>
+                  </div>
+                </div> 
+    
+              </div>
+            <div class="col-sm-7 col-md-7 col-lg-7 ">
+              <div class="mx-7">
+                <form>
+                    <input type="Text" class="form_item1 my-3 px-2" placeholder="Your Name"/>
+                    <input type="email" class="form_item2 my-3 px-2" placeholder="Your Email"/>
+                    <input  type="Text" class="form-control my-3" placeholder="Subject"/>
+    
+                    
+                    <textarea class="form-control my-3" rows="3"  placeholder="Your Comments"></textarea>
+                  </form> 
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button class="w-30  py-2  px-4 my-3 mr-6 text-white rounded-lg bg-purple-600 hover:bg-purple-700 transition-colors">
+                        Submit
+                    </button>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    
+    </section>
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-gray-900 to-gray-500 text-white py-16  " id="footer_section">
+        <div class="container mx-auto px-4">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand Section -->
+                <div class="space-y-4">
+                    <h3
+                        class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                        My Blog</h3>
+                    <p class="text-gray-400 leading-relaxed">Exploring the digital frontier, one story at a time. Join
+                        our community of curious minds.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">About</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">Products</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">Fruits</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">Natural Food</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">Natural Medicine</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">Foods</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Stay Updated</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter</p>
+                    <form class="space-y-2">
+                        <input type="email" placeholder="Enter your email"
+                            class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-gray-300 focus:outline-none focus:border-purple-500">
+                        <button class="w-full px-4 mt-3 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-400 text-sm">
+                        Crafted with ❤️ by <a href="#">Md Ariful Islam</a> &copy; 2025 Modern Blog.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="#" class="text-gray-400 hover:text-purple-400 text-sm transition-colors">Privacy
+                            Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 text-sm transition-colors">Terms of
+                            Service</a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 text-sm transition-colors">Cookie
+                            Policy</a>
+                    </div>
+                </div>
+                
+
+            </div>
+            
+        </div>
+        <button  onclick="goToTop()" id="goToTop" class="px-6 py-2.5 mt-4 rounded-lg bg-purple-600 text-white fixed -right-0 -bottom-0 hover:bg-purple-700  flex items-center gap-2 ml-auto" >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8">
+                </path>
+            </svg>
+            Go Top
+         </button>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="./js/bootstrip_js/bootstrap.bundle.js"></script>
+    <!-- Custom JS -->
+    <script  src="./js/script.js"></script>
+    <script type="module" src="./js/script1.js"></script>
+</body>
+</html>
