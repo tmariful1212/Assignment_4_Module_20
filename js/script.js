@@ -357,11 +357,13 @@ const addToCart = (id, image, price, title) => {
   alert(`${title} is Added To Cart Successfully!`);
 
 };
-
-function openModalCart( ){
 let cartDeliveryPrice = 0;
 let cartTaxPrice = 0;
 let cartTotalPrice = 0;
+let cartDiscount =0;
+let cartFinalPrice =0;
+function openModalCart( ){
+
     const modalCart = document.getElementById('cart_modal');
     document.getElementById("cart_details").innerHTML = " ";
       let sl=0;
@@ -391,12 +393,15 @@ let cartTotalPrice = 0;
 cartDeliveryPrice = price*.1;
 cartTaxPrice = price*.15;
 cartTotalPrice = price + cartDeliveryPrice + cartTaxPrice;
+cartFinalPrice = cartTotalPrice - cartDiscount;
 
             });   
             document.getElementById("cartSubtotalPrice").textContent = price.toFixed(2);  
             document.getElementById("cartDeliveryPrice").textContent = cartDeliveryPrice.toFixed(2);
             document.getElementById("cartTaxPrice").textContent = cartTaxPrice.toFixed(2);
-            document.getElementById("cartTotalPrice").textContent = cartTotalPrice.toFixed(2);    
+            document.getElementById("cartTotalPrice").textContent = cartTotalPrice.toFixed(2);
+            document.getElementById("cartDiscount").textContent = cartDiscount.toFixed(2);
+            document.getElementById("cartFinalPrice").textContent = cartFinalPrice.toFixed(2);    
 
 
     };
@@ -438,4 +443,57 @@ function deleteFromCart(item) {
 
   function goToTop(){
     window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  function addPromoCode(){
+    const promoCode = document.getElementById("promoCodeInput").value;
+    
+    if(cartTotalPrice <= 0){
+      alert(" Add product to Cart First !!")
+    }
+    else if(promoCode == ""){
+      alert(" Give A Promo Code First!!")
+    }
+     else if(promoCode == 'ostad10'){
+      cartDiscount = cartTotalPrice *.1;
+      cartFinalPrice = cartTotalPrice - cartDiscount;
+      document.getElementById("cartDiscount").textContent = cartDiscount.toFixed(2);
+      document.getElementById("cartFinalPrice").textContent = cartFinalPrice.toFixed(2);
+      alert(`${promoCode} is Applied Successfully !!`)
+    }
+    else if(promoCode == 'ostad5'){
+      cartDiscount = cartTotalPrice *.05;
+      cartFinalPrice = cartTotalPrice - cartDiscount;
+      document.getElementById("cartDiscount").textContent = cartDiscount.toFixed(2);
+      document.getElementById("cartFinalPrice").textContent = cartFinalPrice.toFixed(2);
+      alert(`${promoCode} is Applied Successfully !!`)
+    }
+    else{
+     alert(`${promoCode} is Not Correct Promo Code !!`)
+    }
+  }
+
+  function checkout(){
+    if(cartTotalPrice <= 0){
+      alert(" Add product to Cart First !!")
+    }
+    else{
+      alert(`Checkout Amount $${cartFinalPrice} Paid Successfully and Thank You for Your Shopping !!`);
+      count =0;
+      cardId =[];
+      priceCart =[];
+      titleCart = [];
+      imageCart =[];
+      cartDetail =[];
+      cartDetails =[];
+      quantity = 0;
+      cartDeliveryPrice = 0;
+      cartTaxPrice = 0;
+      cartTotalPrice = 0;
+      cartDiscount =0;
+      cartFinalPrice =0;
+      document.getElementById("cartTotal").innerText = count;
+      closeModalCart();
+      
+    }
   }

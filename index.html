@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="./CSS/resposivescreen.css">
     
     <!-- Title   -->
-    <title> Transparency</title>
+    <title> Transparency Live Test</title>
 
 </head>
 
@@ -157,7 +157,7 @@
             <!--........ About First Row....... Start-->
             <div class="row  text-align-center" >
                 <div class="col-md-12 col-lg-5  " >
-                    <div class="about_us text-3xl" style="width: 120px; background-color: rgb(192, 199, 192);" > <p> About Us</p></div>
+                    <div class="about_us text-3xl" style="width: 120px; background-color: rgb(192, 199, 192);" > <p> About </p></div>
                     <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all overflow-hidden group py-10 px-5 my-5">
                         <h2 class="text-bold text-2xl" style="color: rgb(24, 24, 28);">
                             The Rise of E-Commerce Platforms for Food, Natural Medicine, and Organic Products:
@@ -611,17 +611,32 @@ Sample Comment 1
                     <h2 style= "width:500px"> Tax-15% </h2>
                     <h2> $<span id="cartTaxPrice" class="mx-auto"> 0 </span></h2>
                   </div><br>
-                  
                   <div class="d-flex  pl-50"> 
                     <h2 style= "width:500px"> Total Price </h2>
                     <h2> $<span id="cartTotalPrice" class="mx-auto"> 0 </span></h2>
                   </div><br>
 
+                  <div class="d-flex  pl-50"> 
+                    <label style= "width:500px"> Apply Promo Code  </label>
+                    <input type="Text" class="form_item1 my-3 px-2" placeholder="Your Promo Code" style="width:200px" id="promoCodeInput" />
+                     <button onclick="addPromoCode()" class="w-30  py-2  px-4 my-3 mr-6 text-white rounded-lg bg-purple-600 hover:bg-purple-700 transition-colors"> Apply</button>
+                  </div><br>
+                  <div class="d-flex  pl-50"> 
+                    <h2 style= "width:500px"> Discount Amount </h2>
+                    <h2> $<span id="cartDiscount" class="mx-auto"> 0 </span></h2>
+                  </div><br>
+
+                  <div class="d-flex  pl-50"> 
+                    <h2 style= "width:500px">Payable Total Amount </h2>
+                    <h2> $<span id="cartFinalPrice" class="mx-auto"> 0 </span></h2>
+                  </div>
+                  <br>
+                   
                     <div class="d-flex justify-between">
                     <button onclick= "closeModalCart()" class="px-4 py-2 rounded-xl bg-gray-200 text-gray-600 hover:bg-purple-600 hover:text-white hover:shadow-lg hover:shadow-purple-200 transition-all text-sm sm:text-base whitespace-nowrap">
                         Cancel
                       </button>
-                      <button onclick="addToCart(${el.id}, ${el.price},'${el.title}')" class="px-4 py-2 rounded-xl bg-gray-200 text-gray-600 hover:bg-purple-600 hover:text-white hover:shadow-lg hover:shadow-purple-200 transition-all text-sm sm:text-base whitespace-nowrap">  
+                      <button onclick="checkout()" class="px-4 py-2 rounded-xl bg-gray-200 text-gray-600 hover:bg-purple-600 hover:text-white hover:shadow-lg hover:shadow-purple-200 transition-all text-sm sm:text-base whitespace-nowrap">  
                         Checkout
                        </button>    
                     </div>
