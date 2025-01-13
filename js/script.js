@@ -390,12 +390,13 @@ function openModalCart( ){
             </tr>
                  
 `
-cartDeliveryPrice = price*.1;
-cartTaxPrice = price*.15;
-cartTotalPrice = price + cartDeliveryPrice + cartTaxPrice;
-cartFinalPrice = cartTotalPrice - cartDiscount;
+
 
             });   
+            cartDeliveryPrice = price*.1;
+            cartTaxPrice = price*.15;
+            cartTotalPrice = price + cartDeliveryPrice + cartTaxPrice;
+            cartFinalPrice = cartTotalPrice - cartDiscount;
             document.getElementById("cartSubtotalPrice").textContent = price.toFixed(2);  
             document.getElementById("cartDeliveryPrice").textContent = cartDeliveryPrice.toFixed(2);
             document.getElementById("cartTaxPrice").textContent = cartTaxPrice.toFixed(2);
